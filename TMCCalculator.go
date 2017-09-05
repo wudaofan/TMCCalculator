@@ -13,8 +13,8 @@ func check(e error) {
 
 func main() {
 
-	fmt.Print("hello world!")
-	//define var
+	fmt.Print("Start TMC Calculation!")
+	//define variable
 	orderNum := "MU5354123456"
 	flightNum := "MU5354"
 	departureCity := "美国"
@@ -36,9 +36,18 @@ func main() {
 
 	finalStr := part01 + username + part02 + phoneNum + part03 + orderNum + part04 + flightNum + part05 + departureCity + part06 + arrivalCity + part07 + flightPrice + part08 + hongbaoNum + part09
 
-	//write the result to test.txt
-	//d1 := []byte("hello\ngo\n")
+	//generate orders 订单记录
 	d1 := []byte(finalStr)
-	err := ioutil.WriteFile("test.txt", d1, 0644)
+	err := ioutil.WriteFile("orders.txt", d1, 0644)
+	check(err)
+
+	//generate hongbaos 红包发放记录
+	d1 = []byte("hongbaos 红包发放记录")
+	err = ioutil.WriteFile("hongbaos.txt", d1, 0644)
+	check(err)
+
+	//generate hongbao_statistics 红包总数
+	d1 = []byte("hongbao_statistics 红包总数")
+	err = ioutil.WriteFile("hongbao_statistics.txt", d1, 0644)
 	check(err)
 }
