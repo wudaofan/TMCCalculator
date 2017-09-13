@@ -14,143 +14,181 @@ func check(e error) {
 
 func main() {
 
-	fmt.Print("Start TMC Calculation!")
+	fmt.Println("Start TMC Calculation!")
+
 	//define variable
-	userID := "37"
-	orderNum := "MU9578"
-	flightNum := "MU9578"
+	userID := "37"        //用户ID
+	orderNum := "CZ9253"  //订单号
+	flightNum := "CZ9253" //航班号
+
 	//departureCity := "上海"
 	departureCitys := []string{
+		"上海",
+		"杭州",
+		"郑州",
+		"海口",
+		"杭州",
+		"海口",
+		"海口",
+		"海口",
+		"海口",
+		"西安",
+		"三亚",
+		"杭州",
+		"杭州",
+		"武汉",
+		"喀什",
+		"喀什",
+		"喀什",
+		"喀什",
+		"喀什",
+		"喀什",
+		"海口",
+		"厦门",
+		"厦门",
+		"大连",
+		"大连",
+		"西安",
+		"西安",
+		"西安",
 		"温州",
-		"鄂尔多斯",
 		"温州",
 		"杭州",
-		"广州",
-		"成都",
-		"厦门",
-		"厦门",
-		"广州",
-		"广州",
-		"广州",
-		"西安",
-		"西安",
-		"西安",
-		"西安",
-		"广州",
-		"厦门",
-		"果洛",
-		"广州",
-		"满洲里",
-		"丽江",
-		"丽江",
-		"浦东",
-		"广州",
-		"成都",
-		"海口",
+		"太原",
+		"杭州",
+		"宁波",
 	}
 
 	//arrivalCity := "西安"
 	arrivalCitys := []string{
-		"西安",
-		"上海",
-		"西安",
-		"赤峰",
-		"南通",
-		"北京",
+		"沈阳",
+		"深圳",
+		"杭州",
+		"杭州",
+		"海口",
 		"郑州",
 		"郑州",
-		"南通",
-		"济南",
-		"济南",
-		"杭州",
-		"杭州",
-		"杭州",
-		"杭州",
-		"上海",
-		"广州",
-		"西宁",
-		"青岛",
+		"郑州",
+		"郑州",
+		"三亚",
+		"西安",
 		"武汉",
+		"西安",
+		"三亚",
+		"乌鲁木齐",
+		"乌鲁木齐",
+		"乌鲁木齐",
+		"乌鲁木齐",
+		"乌鲁木齐",
+		"乌鲁木齐",
+		"南昌",
+		"日照",
+		"日照",
+		"宁波",
+		"宁波",
 		"杭州",
 		"杭州",
+		"杭州",
+		"西安",
+		"西安",
 		"成都",
-		"太原",
-		"南京",
-		"北京",
+		"广州",
+		"沈阳",
+		"成都",
 	}
 
 	//flightPrice := "1610"
 	flightPrices := []string{
-		"1160",
+		"1460",
+		"1510",
+		"1610",
 		"1910",
-		"1160",
-		"2230",
-		"2320",
-		"1210",
-		"1770",
-		"1170",
-		"2320",
-		"2310",
-		"2310",
-		"1640",
-		"1640",
-		"1640",
-		"1640",
-		"2440",
-		"1710",
-		"1610",
-		"1900",
-		"2950",
-		"1220",
-		"1610",
-		"1900",
-		"1750",
-		"1530",
-		"2570",
+		"1720",
+		"1870",
+		"1870",
+		"1870",
+		"1870",
+		"2130",
+		"2210",
+		"750",
+		"1100",
+		"970",
+		"1470",
+		"1470",
+		"1470",
+		"1470",
+		"1470",
+		"1470",
+		"630",
+		"1700",
+		"1700",
+		"1600",
+		"1600",
+		"1570",
+		"1570",
+		"1570",
+		"1410",
+		"1410",
+		"850",
+		"1030",
+		"1330",
+		"1560",
 	}
 
 	//username := "赵楠"
-	hongbaoNum := "5.88"
-	phoneNum := "15657178960"
+	hongbaoNum := "5.88"      //随机红包数量
+	phoneNum := "15657178960" //代理商手机号
 
 	userNames := []string{
-		"潘萍萍",
-		"吴巧玲",
+		"范巧云",
+		"王天亮",
+		"孙瑛芳",
+		"陈永潮",
+		"张龙馨",
+		"刘艳淑",
+		"马静",
+		"孙轻敏",
+		"张占芝",
+		"赵晔",
+		"黎群英",
+		"肖敏芳",
+		"李艳梅",
+		"甘永林",
+		"董蕾",
+		"高建学",
+		"陆维良",
+		"盛红飞",
+		"朱庆华",
+		"朱芸",
+		"邹子乐",
+		"曾广荣",
+		"孙勇",
+		"姜琳",
+		"徐正虎",
+		"黄林根",
+		"李蓉蓉",
+		"黄弋博",
 		"蔡玲玲",
-		"江亦爽",
-		"唐国裕",
-		"敬子洁",
-		"赵锴豪",
-		"赵锴豪",
-		"梁洁宁",
-		"焦亚西",
-		"汪海燕",
-		"张春雷",
-		"谢子瑞",
-		"张子晗",
-		"唐子坤",
-		"张家宁",
-		"龚旭东",
-		"洪梦权",
-		"谢荣祥",
-		"姚可海",
-		"胡湘丹",
-		"胡湘丹",
-		"陈念宇",
-		"吴文斌",
-		"孙帅",
-		"张立庆",
+		"潘萍萍",
+		"汪春玉",
+		"李斌",
+		"马婧林",
+		"方培力",
 	}
 	//fmt.Println(userNames)
 
 	fmt.Println("length = " + strconv.Itoa(len(userNames)))
 
-	//订单记录
-	//sum := 0
-	for i := 0; i < len(userNames); i++ {
-		//sum += i
-		//fmt.Print(userNames[i] + ",")
+	//generate orders 订单记录
+	/*
+		d1 := []byte(finalStr)
+		err := ioutil.WriteFile("orders.txt", d1, 0644)
+		check(err)
+	*/
 
+	for i := 0; i < len(userNames); i++ {
+
+		//fmt.Print(userNames[i] + ",")
 		part01 := "INSERT INTO `hd_hongbao`.`orders` (`id`, `user_name`, `id_card_number`, `phone_number`, `provider_id`, `service_id`, `order_number`, `order_detail`, `hongbao_given`, `hongbao_used`, `created`, `modified`) VALUES (NULL, '"
 		part02 := "', '111', '"
 		part03 := "', '1', '1', '"
@@ -159,16 +197,10 @@ func main() {
 		part06 := "\\\", \\\"flight_city_arrival\\\" : \\\""
 		part07 := "\\\",\\\"flight_class\\\" : \\\"经济舱\\\", \\\"flight_price\\\" : \\\""
 		part08 := "\\\", \\\"flight_tax\\\" : \\\"0\\\"}', '"
-		part09 := "', '0', '2017-09-13 09:00:00', '2017-09-13 09:00:00');"
+		part09 := "', '0', '2017-09-14 08:00:00', '2017-09-14 08:00:00');"
 
 		finalStr := part01 + userNames[i] + part02 + phoneNum + part03 + orderNum + part04 + flightNum + part05 + departureCitys[i] + part06 + arrivalCitys[i] + part07 + flightPrices[i] + part08 + hongbaoNum + part09
 
-		//generate orders 订单记录
-		/*
-			d1 := []byte(finalStr)
-			err := ioutil.WriteFile("orders.txt", d1, 0644)
-			check(err)
-		*/
 		f, err := os.OpenFile("orders.txt", os.O_APPEND, 0666)
 		n, err := f.WriteString(finalStr)
 		f.Close()
@@ -185,51 +217,58 @@ func main() {
 	*/
 
 	//随机红包
-	/*
-		for i := 0; i < len(userNames); i++ {
-			hongbaosStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '5.88', '5.88','2', '2017-09-13 11:00:00', '2017-09-13 11:00:00');"
+	/* */
+	for i := 0; i < len(userNames); i++ {
+		hongbaosSuijiStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '5.88', '5.88','2', '2017-09-14 08:00:05', '2017-09-14 08:00:05');"
 
-			f, err := os.OpenFile("hongbaos.txt", os.O_APPEND, 0666)
-			n, err := f.WriteString(hongbaosStr)
-			f.Close()
-			check(err)
-			print(strconv.Itoa(n) + ",")
-		}
-	*/
+		f, err := os.OpenFile("suijihongbaos.txt", os.O_APPEND, 0666)
+		n, err := f.WriteString(hongbaosSuijiStr)
+		f.Close()
+		check(err)
+		print(strconv.Itoa(n) + ",")
+	}
 
 	//平台补贴红包
-	/* */
+	/**/
 	compensateHongbaos := []string{
-		"80",
+		"100",
+		"102.5",
+		"109.5",
 		"130",
-		"80",
-		"152.5",
-		"160",
-		"82.5",
-		"120",
-		"120",
-		"160",
-		"365",
-		"365",
-		"260",
-		"260",
-		"260",
-		"260",
-		"167.5",
 		"117.5",
+		"127.5",
+		"127.5",
+		"127.5",
+		"127.5",
+		"145",
+		"150",
+		"52.5",
+		"75",
+		"67.5",
+		"100",
+		"100",
+		"100",
+		"100",
+		"100",
+		"100",
+		"42.5",
+		"115",
+		"115",
 		"110",
-		"130",
-		"202.5",
 		"110",
-		"110",
-		"130",
-		"120",
-		"105",
-		"175",
+		"107.5",
+		"107.5",
+		"107.5",
+		"97.5",
+		"97.5",
+		"57.5",
+		"70",
+		"90",
+		"107.5",
 	}
 
 	for i := 0; i < len(compensateHongbaos); i++ {
-		hongbaosStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '" + compensateHongbaos[i] + "', '" + compensateHongbaos[i] + "','4', '2017-09-13 11:00:00', '2017-09-13 11:00:00');"
+		hongbaosStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '" + compensateHongbaos[i] + "', '" + compensateHongbaos[i] + "','4', '2017-09-13 14:00:10', '2017-09-13 14:00:10');"
 
 		f, err := os.OpenFile("hongbaos.txt", os.O_APPEND, 0666)
 		n, err := f.WriteString(hongbaosStr)
