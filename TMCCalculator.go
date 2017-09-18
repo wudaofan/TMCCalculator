@@ -17,163 +17,91 @@ func main() {
 	fmt.Println("Start TMC Calculation!")
 
 	//define variable
-	userID := "37"        //用户ID
-	orderNum := "CZ9253"  //订单号
-	flightNum := "CZ9253" //航班号
+	userID := "41"                      //用户ID
+	hongbaoNum := "5.88"                //随机红包数量
+	phoneNum := "18605710572"           //代理商手机号
+	createDate := "2017-09-13 20:00:00" //创建时间
+	orderNum := "AZ9253"                //订单号
+	flightNum := "AZ9253"               //航班号
 
 	//departureCity := "上海"
 	departureCitys := []string{
-		"上海",
-		"杭州",
-		"郑州",
 		"海口",
 		"杭州",
-		"海口",
-		"海口",
-		"海口",
-		"海口",
-		"西安",
-		"三亚",
-		"杭州",
-		"杭州",
-		"武汉",
-		"喀什",
-		"喀什",
-		"喀什",
-		"喀什",
-		"喀什",
-		"喀什",
-		"海口",
 		"厦门",
-		"厦门",
-		"大连",
-		"大连",
-		"西安",
-		"西安",
-		"西安",
-		"温州",
-		"温州",
+		"扬州",
+		"成都",
+		"成都",
+		"杭州",
+		"杭州",
+		"杭州",
 		"杭州",
 		"太原",
+		"太原",
+		"南京",
+		"南京",
 		"杭州",
-		"宁波",
+		"杭州",
 	}
 
 	//arrivalCity := "西安"
 	arrivalCitys := []string{
-		"沈阳",
+		"南昌 ",
+		"北京",
+		"浦东",
 		"深圳",
 		"杭州",
 		"杭州",
-		"海口",
-		"郑州",
-		"郑州",
-		"郑州",
-		"郑州",
-		"三亚",
-		"西安",
-		"武汉",
-		"西安",
-		"三亚",
-		"乌鲁木齐",
-		"乌鲁木齐",
-		"乌鲁木齐",
-		"乌鲁木齐",
-		"乌鲁木齐",
-		"乌鲁木齐",
-		"南昌",
-		"日照",
-		"日照",
-		"宁波",
-		"宁波",
+		"拉萨",
+		"拉萨",
+		"拉萨",
+		"石家庄",
 		"杭州",
 		"杭州",
-		"杭州",
-		"西安",
-		"西安",
-		"成都",
-		"广州",
-		"沈阳",
-		"成都",
+		"长春",
+		"长春",
+		"深圳",
+		"深圳",
 	}
 
 	//flightPrice := "1610"
 	flightPrices := []string{
-		"1460",
-		"1510",
-		"1610",
-		"1910",
-		"1720",
-		"1870",
-		"1870",
-		"1870",
-		"1870",
-		"2130",
-		"2210",
-		"750",
-		"1100",
-		"970",
-		"1470",
-		"1470",
-		"1470",
-		"1470",
-		"1470",
-		"1470",
 		"630",
-		"1700",
-		"1700",
-		"1600",
-		"1600",
-		"1570",
-		"1570",
-		"1570",
-		"1410",
-		"1410",
-		"850",
-		"1030",
-		"1330",
-		"1560",
+		"1520",
+		"670",
+		"1180",
+		"1550",
+		"1550",
+		"1920",
+		"1920",
+		"1920",
+		"360",
+		"1350",
+		"1350",
+		"1290",
+		"1290",
+		"1170",
+		"1170",
 	}
 
 	//username := "赵楠"
-	hongbaoNum := "5.88"      //随机红包数量
-	phoneNum := "15657178960" //代理商手机号
-
 	userNames := []string{
-		"范巧云",
-		"王天亮",
-		"孙瑛芳",
-		"陈永潮",
-		"张龙馨",
-		"刘艳淑",
-		"马静",
-		"孙轻敏",
-		"张占芝",
-		"赵晔",
-		"黎群英",
-		"肖敏芳",
-		"李艳梅",
-		"甘永林",
-		"董蕾",
-		"高建学",
-		"陆维良",
-		"盛红飞",
-		"朱庆华",
-		"朱芸",
-		"邹子乐",
-		"曾广荣",
-		"孙勇",
-		"姜琳",
-		"徐正虎",
-		"黄林根",
-		"李蓉蓉",
-		"黄弋博",
-		"蔡玲玲",
-		"潘萍萍",
-		"汪春玉",
-		"李斌",
-		"马婧林",
-		"方培力",
+		"周国兰",
+		"刘小娇",
+		"熊德煌",
+		"贡旭东",
+		"毛丹",
+		"王璐",
+		"卢巧文",
+		"高爱华",
+		"王桂芬",
+		"金燕和",
+		"杨冬英",
+		"陈家芳",
+		"潘菘芋",
+		"宣槐",
+		"叶遇春",
+		"叶伟生",
 	}
 	//fmt.Println(userNames)
 
@@ -197,7 +125,7 @@ func main() {
 		part06 := "\\\", \\\"flight_city_arrival\\\" : \\\""
 		part07 := "\\\",\\\"flight_class\\\" : \\\"经济舱\\\", \\\"flight_price\\\" : \\\""
 		part08 := "\\\", \\\"flight_tax\\\" : \\\"0\\\"}', '"
-		part09 := "', '0', '2017-09-14 08:00:00', '2017-09-14 08:00:00');"
+		part09 := "', '0', '" + createDate + "', '" + createDate + "');"
 
 		finalStr := part01 + userNames[i] + part02 + phoneNum + part03 + orderNum + part04 + flightNum + part05 + departureCitys[i] + part06 + arrivalCitys[i] + part07 + flightPrices[i] + part08 + hongbaoNum + part09
 
@@ -219,7 +147,7 @@ func main() {
 	//随机红包
 	/* */
 	for i := 0; i < len(userNames); i++ {
-		hongbaosSuijiStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '5.88', '5.88','2', '2017-09-14 08:00:05', '2017-09-14 08:00:05');"
+		hongbaosSuijiStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '" + hongbaoNum + "', '" + hongbaoNum + "','2', '" + createDate + "', '" + createDate + "');"
 
 		f, err := os.OpenFile("suijihongbaos.txt", os.O_APPEND, 0666)
 		n, err := f.WriteString(hongbaosSuijiStr)
@@ -231,44 +159,26 @@ func main() {
 	//平台补贴红包
 	/**/
 	compensateHongbaos := []string{
-		"100",
-		"102.5",
-		"109.5",
-		"130",
-		"117.5",
-		"127.5",
-		"127.5",
-		"127.5",
-		"127.5",
-		"145",
-		"150",
-		"52.5",
-		"75",
-		"67.5",
-		"100",
-		"100",
-		"100",
-		"100",
-		"100",
-		"100",
 		"42.5",
-		"115",
-		"115",
-		"110",
-		"110",
-		"107.5",
-		"107.5",
-		"107.5",
-		"97.5",
-		"97.5",
-		"57.5",
-		"70",
-		"90",
-		"107.5",
+		"105",
+		"45",
+		"80",
+		"105",
+		"105",
+		"130",
+		"130",
+		"130",
+		"25",
+		"92.5",
+		"92.5",
+		"87.5",
+		"87.5",
+		"80",
+		"80",
 	}
 
 	for i := 0; i < len(compensateHongbaos); i++ {
-		hongbaosStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '" + compensateHongbaos[i] + "', '" + compensateHongbaos[i] + "','4', '2017-09-13 14:00:10', '2017-09-13 14:00:10');"
+		hongbaosStr := "INSERT INTO `hd_hongbao`.`hongbaos` (`id`, `user_id`, `service_id`, `provider_id`, `type`, `hongbao_count`, `hongbao_money`, `description`, `created`, `modified`) VALUES (NULL, '" + userID + "', '1', '1', '1', '" + compensateHongbaos[i] + "', '" + compensateHongbaos[i] + "','4', '" + createDate + "', '" + createDate + "');"
 
 		f, err := os.OpenFile("hongbaos.txt", os.O_APPEND, 0666)
 		n, err := f.WriteString(hongbaosStr)
